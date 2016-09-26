@@ -40,7 +40,7 @@ public class ListActivity extends AppCompatActivity implements DerpAdapter.ItemC
 
         adapter = new DerpAdapter(DerpData.getListData(), this);
         recView.setAdapter(adapter);
-        adapter.setItemClickCallback(this);
+        adapter.setItemClickCallback(this);5
 
 
     }
