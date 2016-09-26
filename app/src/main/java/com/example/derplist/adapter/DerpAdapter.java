@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,7 +39,7 @@ public class DerpAdapter extends RecyclerView.Adapter<DerpAdapter.DerpHolder>{
 
     @Override
     public DerpHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.list_item, parent, false);
+        View view = inflater.inflate(R.layout.card_item, parent, false);
         return new DerpHolder(view);
     }
 
@@ -47,11 +48,11 @@ public class DerpAdapter extends RecyclerView.Adapter<DerpAdapter.DerpHolder>{
         ListItem item = listData.get(position);
         holder.title.setText(item.getTitle());
         holder.subTitle.setText(item.getSubTitle());
-        if (item.isFavourite()){
+        /*if (item.isFavourite()){
             holder.secondaryIcon.setImageResource(R.drawable.ic_star_black_24dp);
         } else {
             holder.secondaryIcon.setImageResource(R.drawable.ic_star_border_black_24dp);
-        }
+        }*/
 
     }
 
@@ -71,8 +72,9 @@ public class DerpAdapter extends RecyclerView.Adapter<DerpAdapter.DerpHolder>{
         private TextView title;
         private TextView subTitle;
         private ImageView thumbnail;
-        private ImageView secondaryIcon;
+        //private ImageView secondaryIcon;
         private View container;
+        private Button load;
 
         public DerpHolder(View itemView) {
             super(itemView);
@@ -80,19 +82,21 @@ public class DerpAdapter extends RecyclerView.Adapter<DerpAdapter.DerpHolder>{
             title = (TextView)itemView.findViewById(R.id.lbl_item_text);
             subTitle = (TextView)itemView.findViewById(R.id.lbl_item_sub_title);
             thumbnail = (ImageView)itemView.findViewById(R.id.im_item_icon);
-            secondaryIcon = (ImageView)itemView.findViewById(R.id.im_item_icon_secondary);
-            secondaryIcon.setOnClickListener(this);
+            //secondaryIcon = (ImageView)itemView.findViewById(R.id.im_item_icon_secondary);
+            //secondaryIcon.setOnClickListener(this);
+            load = (Button)itemView.findViewById(R.id.btn_card_load);
+            load.setOnClickListener(this);
             container = itemView.findViewById(R.id.cont_item_root);
-            container.setOnClickListener(this);
+            //container.setOnClickListener(this);
 
         }
 
         @Override
         public void onClick(View v) {
-            if (v.getId() == R.id.cont_item_root){
+            if (v.getId() == R.id.btn_card_load){
                 itemClickCallback.onItemClick(getAdapterPosition());
             } else {
-                itemClickCallback.onSecondaryIconClick(getAdapterPosition());
+                //itemClickCallback.onSecondaryIconClick(getAdapterPosition());
             }
 
         }

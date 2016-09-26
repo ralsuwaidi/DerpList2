@@ -4,6 +4,7 @@
     android:id="@+id/activity_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0E0E0"
 
     tools:context="com.example.derplist.ui.ListActivity">
 
