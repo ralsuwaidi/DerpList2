@@ -22,18 +22,39 @@ public class DerpData {
                     " one who suspects his faith in them and questions what he gathers from them," +
                     " the one who submits to argument and demonstration, and not to the " +
                     "sayings of a human being whose nature is fraught with all kinds " +
+                    "of imperfection and deficiency." +
+                    "The seeker after the truth is not one who studies the writings of the ancients and," +
+                    " following his natural disposition, puts his trust in them, but rather the" +
+                    " one who suspects his faith in them and questions what he gathers from them," +
+                    " the one who submits to argument and demonstration, and not to the " +
+                    "sayings of a human being whose nature is fraught with all kinds " +
                     "of imperfection and deficiency.",
             "You must take personal responsibility. You cannot change the circumstances, the" +
                     " seasons, or the wind, but you can change yourself. That is something you" +
-                    " have charge of."
+                    " have charge of.","Description here","Description here","Description here",
+            "Description here","Description here","Description here",
+            "Description here","Description here","Description here",
+            "Description here","Description here","Description here",
+            "Description here","Description here","Description here",
+            "Description here","Description here","Description here",
+            "Description here","Description here","Description here","Description here",
+            "Description here",
+
     };
-    private static final String[] subTitles = {"Bruce Lee",
-            "Marcus Aurelius",
-            "Meng Tzu",
-            "Ajahn Chah",
-            "Carl Sagan",
-            "Alhazen",
-            "Jim Rohn"
+    private static final String[] subTitles = {"Prophet Adam",
+            "Prophet Idris (Enoch)",
+            "Prophet Noah (Noah)",
+            "Prophet Hud",
+            "Prophet Salih",
+            "Prophet Ibrahim (Abraham)",
+            "Prophet Isma'il (Ishmael)","Ishaq (Isaac)","Prophet Yaqub (Jacob)","Prophet Lot","Prophet Shuaib",
+            "Prophet Yusuf (Joseph)","Prophet Ayoub (Job)", "Prophet (Dhul-Kifl)", "Prophet Yunus (Jonah)",
+            "Prophet Musa (Moses) & Prophet Harun", "Prophet Hizqeel (Ezekiel)", "Prophet Elyas (Elisha)",
+            "Prophet Shammil (Samuel)", "Prophet Dawud (David)", "Prophet Sulaiman (Soloman)",
+            "Prophet Shia (Isaiah)", "Prophet Aramaya (Jeremiah)", "Prophet Daniel",
+            "Prophet Uzair (Ezra)", "Prophet Zakariyah (Zechariah)", "Prophet Yahya (John)",
+            "Prophet Isa (Jesus)", "Prophet Muhammad "
+
 
     };
     private static final int icon = R.drawable.ic_tonality_black_36dp;
@@ -43,7 +64,7 @@ public class DerpData {
 
         //Repeat process 4 times, so that we have enough data to demonstrate a scrollable
         //RecyclerView
-        for (int x = 0; x < 4; x++) {
+        for (int x = 0; x < 1; x++) {
             //create ListItem with dummy data, then add them to our List
             for (int i = 0; i < titles.length; i++) {
                 ListItem item = new ListItem();

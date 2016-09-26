@@ -11,7 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        card_view:cardCornerRadius="4dp">
+        card_view:cardBackgroundColor="#E0E0E0"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="3dp"
+
+        >
 
         <RelativeLayout
             android:id="@+id/cont_card_content"
@@ -22,7 +26,7 @@
             <ImageView
                 android:id="@+id/im_item_icon"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="55dp"
                 android:background="@color/colorPrimary"
                 android:padding="36dp"
                 android:tint="#FFFFFF"
@@ -44,21 +48,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/im_item_icon"
-                android:paddingLeft="16dp" />
+                android:ellipsize="end"
+                android:maxLines="6"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp" />
 
 
             <Button
                 android:id="@+id/btn_card_load"
                 android:layout_width="wrap_content"
                 android:layout_height="56dp"
+                android:layout_alignParentEnd="true"
                 android:layout_below="@+id/lbl_item_text"
                 android:background="@android:color/transparent"
-                android:textColor="@color/colorAccent"
+                android:paddingBottom="8dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="LOAD" />
+                android:text="VIEW ALL"
+                android:textColor="@color/colorAccent" />
+
+            <Spinner
+                android:id="@+id/main_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_card_load" />
 
         </RelativeLayout>
 

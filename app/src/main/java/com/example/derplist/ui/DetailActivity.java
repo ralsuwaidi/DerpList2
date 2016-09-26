@@ -23,3 +23,5 @@ public class DetailActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.lbl_quote_attribution)).setText(extras.getString(EXTRA_ATTR));
     }
 }
+
+
